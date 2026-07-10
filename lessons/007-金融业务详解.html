@@ -1,43 +1,82 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>第7课：金融业务详解</title><style>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>第7课：金融业务详解</title>
+<style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:820px;margin:0 auto;padding:30px 20px 100px;color:#1a1a2e;background:#fafafa;line-height:2;font-size:16px}
-h1{font-size:28px}.subtitle{font-size:15px;color:#888;border-bottom:3px solid #0057a3;padding-bottom:14px;margin-bottom:28px}
-h2{font-size:20px;margin:32px 0 14px;color:#0057a3;border-left:5px solid #0057a3;padding-left:12px}
-.card{background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:20px 24px;margin:18px 0}
-.baidu{background:#f0f7ff;border-left:5px solid #0057a3;padding:14px 20px;margin:16px 0;border-radius:6px;font-size:15px}
-.highlight{background:#fff8e1;border-left:5px solid #f9a825;padding:14px 20px;margin:16px 0;border-radius:6px;font-size:15px}
-.exam-q{background:#f3f4f6;border-radius:10px;padding:18px 22px;margin:18px 0;border-left:5px solid #e8710a}
-.exam-q .label{font-size:13px;color:#e8710a;font-weight:700;margin-bottom:6px}
-.exam-q .qtext{font-size:16px;margin-bottom:8px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:860px;margin:0 auto;padding:30px 20px 120px;color:#1a1a2e;background:#fafafa;line-height:2.2;font-size:16px}
+h1{font-size:28px;margin-bottom:2px;color:#1a1a2e}.subtitle{font-size:14px;color:#888;margin-bottom:28px;border-bottom:3px solid #0057a3;padding-bottom:14px}
+h2{font-size:20px;margin:32px 0 12px;color:#0057a3;border-left:5px solid #0057a3;padding-left:12px}
+p,li{font-size:16px;margin-bottom:10px;color:#333;line-height:2.2}
+.card{background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:20px 24px;margin:16px 0}
+.card h3{margin-top:0;color:#0057a3;font-size:16px}
+.baidu{background:#f0f7ff;border-left:5px solid #0057a3;padding:14px 20px;margin:16px 0;border-radius:6px;font-size:15px;line-height:2}
+.highlight{background:#fff8e1;border-left:5px solid #f9a825;padding:14px 20px;margin:16px 0;border-radius:6px;font-size:15px;line-height:2}
+.exam-q{background:#f3f4f6;border-radius:10px;padding:16px 20px;margin:14px 0;border-left:5px solid #e8710a}
+.exam-q .label{font-size:12px;color:#e8710a;font-weight:700;margin-bottom:4px}
+.exam-q .qtext{font-size:16px;margin-bottom:6px;line-height:2}
 .exam-q .options{font-size:15px;color:#444;line-height:2.2}
-.exam-q .answer{font-size:15px;color:#2e7d32;display:none;margin-top:8px;padding-top:10px;border-top:2px dashed #ddd}
+.exam-q .ans{font-size:15px;color:#2e7d32;display:none;margin-top:8px;padding-top:10px;border-top:2px dashed #ddd;line-height:2}
 .exam-q .show{display:block}
-.btn{background:#0057a3;color:#fff;border:none;padding:8px 20px;border-radius:6px;font-size:14px;cursor:pointer;margin:6px 0}
-.btn:hover{background:#003d73}
-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
-th,td{padding:10px 12px;border:1px solid #ddd;text-align:left}th{background:#e3f0ff}
+.btn{background:#0057a3;color:#fff;border:none;padding:7px 18px;border-radius:5px;font-size:14px;cursor:pointer;margin:4px 0}.btn:hover{background:#003d73}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}th,td{padding:10px 12px;border:1px solid #ddd;text-align:left}th{background:#e3f0ff;font-weight:600}
 </style></head><body>
-<h1>📮 第7课：金融业务详解</h1>
+<h1>📮 第7课：金融业务详解（修正版）</h1>
 <p class="subtitle">模块一 · 三大业务 · 对应柜员岗方向</p>
-<div class="baidu"><strong>🤔 这节课学什么：</strong>邮储银行是中国邮政旗下的银行，全国网点最多。如果你报柜员岗，金融业务是你以后的主要工作内容。</div>
-<h2>一、核心知识点</h2>
-<div class="card"><h3>🏦 邮储银行关键信息</h3>
-<table><tr><td>全称</td><td>中国邮政储蓄银行</td></tr>
+<div class="baidu"><strong>🤔 这节课学什么：</strong>金融业务是邮政三大主业之一，通过邮储银行运营。你报柜员岗，这部分是你的工作内容，也是专业知识考试的重点。来源：邮储银行官网、《邮政业务与管理》第10章、人民银行《金融知识普及读本》第9-10章。</div>
+
+<h2>一、邮储银行基本数据</h2>
+<table><tr><th>项目</th><th>数据</th></tr>
+<tr><td>全称</td><td>中国邮政储蓄银行</td></tr>
 <tr><td>成立时间</td><td>2007年</td></tr>
 <tr><td>客服电话</td><td>95580</td></tr>
-<tr><td>股票代码</td><td>A股601658，H股1658.HK</td></tr>
-<tr><td>网点数量</td><td>近4万个（全国最多）</td></tr>
+<tr><td>网点数量</td><td>近4万个（全国商业银行中最多）</td></tr>
+<tr><td>A股代码</td><td>601658</td></tr>
+<tr><td>H股代码</td><td>1658.HK</td></tr>
 <tr><td>市场定位</td><td>服务社区、服务三农、服务中小企业</td></tr>
-</table></div>
-<div class="card"><h3>📌 主要业务</h3>
-<p>① 储蓄存款（定期活期）<br>② 贷款业务（房贷车贷经营贷）<br>③ 理财业务（基金理财）<br>④ 中间业务（代发工资、代缴费、汇兑）</p></div>
-<div class="highlight"><strong>💡 和其他银行的区别：</strong>邮储银行网点多在县城和农村，是最接地气的银行。定位是普惠金融，不只看重大客户。</div>
-<h2>📝 真题练习</h2>
-<div class="exam-q"><div class="label">📝 【2024】</div><div class="qtext"><strong>1. 邮储银行客服热线是？</strong></div><div class="options">A. 95566 B. 95580 C. 95533 D. 95588</div><button class="btn" onclick="document.getElementById('g1').classList.add('show')">看答案</button><div id="g1" class="answer">✅ B。95580=邮储，记住80。</div></div>
-<div class="exam-q"><div class="label">📝 【2024】</div><div class="qtext"><strong>2. 邮储银行的定位是什么？</strong></div><div class="options">A. 服务大公司 B. 服务社区三农中小企业 C. 只服务农村 D. 只服务城市</div><button class="btn" onclick="document.getElementById('g2').classList.add('show')">看答案</button><div id="g2" class="answer">✅ B。服务社区、三农、中小企业。</div></div>
-<div class="exam-q"><div class="label">📝 【2024】</div><div class="qtext"><strong>3. 邮储银行全国约有多少网点？</strong></div><div class="options">A. 1万个 B. 2万个 C. 4万个 D. 10万个</div><button class="btn" onclick="document.getElementById('g3').classList.add('show')">看答案</button><div id="g3" class="answer">✅ C。近4万个，全国最多。</div></div>
-<div class="exam-q"><div class="label">📝 【2023】</div><div class="qtext"><strong>4. 以下不属于邮储银行业务的是？</strong></div><div class="options">A. 存款 B. 贷款 C. 证券经纪 D. 理财</div><button class="btn" onclick="document.getElementById('g4').classList.add('show')">看答案</button><div id="g4" class="answer">✅ C。证券经纪（买卖股票）不是邮储银行业务。</div></div>
-<div class="exam-q"><div class="label">📝 【2023】</div><div class="qtext"><strong>5. 邮储银行的股票代码是？</strong></div><div class="options">A. 600000 B. 601398 C. 601658 D. 601939</div><button class="btn" onclick="document.getElementById('g5').classList.add('show')">看答案</button><div id="g5" class="answer">✅ C。601658是邮储银行A股代码。</div></div>
-<script>function showAns(id){document.getElementById(id).classList.add('show')}</script>
-<p style="margin-top:40px"><a href="006-寄递业务详解.html">← 上一课</a> · <a href="../index.html">目录</a> · <a href="008-电商与农村物流.html">下一课 →</a></p>
+<tr><td>H股上市</td><td>2016年9月</td></tr>
+<tr><td>A股上市</td><td>2019年12月</td></tr></table>
+
+<h2>二、主要业务类型</h2>
+<div class="card"><h3>📌 储蓄存款</h3><p>活期存款、定期存款（整存整取、零存整取等）。定期存款利率高于活期。</p></div>
+<div class="card"><h3>📌 贷款业务</h3><p>个人贷款（房贷、车贷、消费贷）、小微企业贷款、三农贷款。</p></div>
+<div class="card"><h3>📌 理财业务</h3><p>代销基金、保险、理财产品。注意：理财非存款，投资有风险。</p></div>
+<div class="card"><h3>📌 中间业务</h3><p>代发工资、代缴水电费、代理保险、汇兑业务（邮政汇款）。这些业务不占用银行资金，靠服务费赚钱。</p></div>
+
+<h2>三、货币与金融基础知识（考试重点）</h2>
+<div class="card"><h3>📌 货币的职能</h3><p>价值尺度、流通手段、支付手段、贮藏手段、世界货币。</p></div>
+<div class="card"><h3>📌 货币政策工具</h3><p>央行三大工具：①存款准备金率（调整银行上交央行的钱的比例）②再贴现率（央行给银行贷款的利率）③公开市场操作（买卖国债调节市场资金）。</p></div>
+<div class="card"><h3>📌 利率</h3><p>单利：利息不计入本金生息。复利：利息计入本金再生息。</p></div>
+<div class="card"><h3>📌 汇率</h3><p>直接标价法（1美元=7.2人民币）、间接标价法（1人民币=0.14美元）。</p></div>
+
+<h2>📝 考点巩固练习（10题）</h2>
+<p style="font-size:14px;color:#888">说明：根据邮储银行官网及金融知识读本编写。</p>
+
+<div class="exam-q"><div class="label">【模拟练习】</div><div class="qtext"><strong>1. 邮储银行客服热线是？</strong></div><div class="options">A. 95566<br>B. 95580<br>C. 95533<br>D. 95588</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ <strong>B</strong><br>95580。95566=中行，95533=建行，95588=工行。</div></div>
+
+<div class="exam-q"><div class="label">【模拟练习】</div><div class="qtext"><strong>2. 邮储银行市场定位是？</strong></div><div class="options">A. 服务大公司<br>B. 服务社区三农中小企业<br>C. 只服务农村<br>D. 只服务城市</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ <strong>B</strong><br>社区+三农+中小企业。</div></div>
+
+<div class="exam-q"><div class="label">【模拟练习】</div><div class="qtext"><strong>3. 邮储银行网点约多少个？</strong></div><div class="options">A. 1万个<br>B. 2万个<br>C. 4万个<br>D. 10万个</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ <strong>C</strong><br>近4万个，全国商业银行中最多。</div></div>
+
+<div class="exam-q"><div class="label">【模拟练习】</div><div class="qtext"><strong>4. 以下哪个是中央银行的货币政策工具？</strong></div><div class="options">A. 存款准备金率<br>B. 信贷审批<br>C. 利率定价<br>D. 贷款发放</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ <strong>A</strong><br>存款准备金率是央行三大货币政策工具之一。</div></div>
+
+<div class="exam-q"><div class="label">【模拟练习】</div><div class="qtext"><strong>5. 邮储银行成立于？</strong></div><div class="options">A. 1998<br>B. 2005<br>C. 2007<br>D. 2019</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ <strong>C</strong><br>2007年。</div></div>
+
+<div class="exam-q"><div class="label">【模拟练习】</div><div class="qtext"><strong>6. 货币的职能不包括？</strong></div><div class="options">A. 价值尺度<br>B. 流通手段<br>C. 贮藏手段<br>D. 消费手段</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ <strong>D</strong><br>消费手段不是货币的职能。五大职能：价值尺度、流通手段、支付手段、贮藏手段、世界货币。</div></div>
+
+<div class="exam-q"><div class="label">【模拟练习】</div><div class="qtext"><strong>7. 邮储银行A股代码是？</strong></div><div class="options">A. 601398<br>B. 601658<br>C. 601939<br>D. 600000</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ <strong>B</strong><br>601658。</div></div>
+
+<div class="exam-q"><div class="label">【模拟练习】</div><div class="qtext"><strong>8. 在邮储银行工作，柜员的主要职责是？</strong></div><div class="options">A. 分拣包裹<br>B. 办理存取款转账<br>C. 送快递<br>D. 修电脑</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ <strong>B</strong><br>柜员办理存取款、转账、开卡等银行业务。</div></div>
+
+<div class="exam-q"><div class="label">【模拟练习】</div><div class="qtext"><strong>9. 关于复利的说法正确的是？</strong></div><div class="options">A. 利息不计入本金<br>B. 利息计入本金继续生息<br>C. 利率固定不变<br>D. 收益低于单利</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ <strong>B</strong><br>复利=利滚利，利息计入本金继续生息。</div></div>
+
+<div class="exam-q"><div class="label">【模拟练习】</div><div class="qtext"><strong>10. 邮储银行H股上市年份？</strong></div><div class="options">A. 2007<br>B. 2016<br>C. 2019<br>D. 2021</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ <strong>B</strong><br>2016年9月在香港H股上市。</div></div>
+
+<div style="margin-top:40px;padding:16px 20px;background:#f5f5f5;border-radius:8px;font-size:13px;color:#666;line-height:1.8">
+  <p><strong>📌 本课知识点来源：</strong></p>
+  <p>• 邮储银行基本信息来源于邮储银行官网(www.psbc.com)。</p>
+  <p>• 金融基础知识来源于人民银行《金融知识普及读本》第9-10章。</p>
+  <p>• 练习题均为根据上述来源编写的模拟练习。</p>
+</div>
+
+<p style="margin-top:40px"><a href="006-寄递业务详解.html">← 上一课</a> · <a href="../index.html">📂 目录</a> · <a href="008-电商与农村物流.html">下一课 →</a></p>
 </body></html>
