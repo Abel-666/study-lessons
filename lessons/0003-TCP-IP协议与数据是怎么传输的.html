@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三课：TCP/IP 协议与数据传输</title>
+<style>
+  body {
+    font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2em 1.5em;
+    line-height: 1.8;
+    color: #1a1a2e;
+    background: #fafafa;
+  }
+  h1 { font-size: 1.8em; border-bottom: 3px solid #0f3460; padding-bottom: 0.3em; color: #0f3460; }
+  h2 { font-size: 1.3em; margin-top: 1.5em; color: #16213e; }
+  h3 { font-size: 1.1em; color: #0f3460; }
+  .card {
+    background: white; border-radius: 8px; padding: 1em 1.5em;
+    margin: 1em 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-left: 4px solid #0f3460;
+  }
+  .analogy {
+    background: #f5f0e8; border-radius: 8px; padding: 1em 1.5em;
+    margin: 1em 0; border-left: 4px solid #8b7355;
+  }
+  .step {
+    background: #e8f4f8; border-radius: 8px; padding: 0.8em 1.2em;
+    margin: 0.8em 0; border-left: 4px solid #4a9eff;
+  }
+  .tip { background: #fff9e6; border-left: 4px solid #f0a500; padding: 0.8em 1.2em; margin: 1em 0; border-radius: 4px; }
+  .quiz { background: #f0f7ff; border-radius: 8px; padding: 1.2em 1.5em; margin: 1.5em 0; }
+  code { background: #e8e8e8; padding: 0.1em 0.3em; border-radius: 3px; font-size: 0.9em; }
+  ul { padding-left: 1.2em; }
+  li { margin: 0.5em 0; }
+  strong { color: #0f3460; }
+  .box {
+    border: 2px solid #0f3460; border-radius: 8px; padding: 0.8em 1em;
+    margin: 0.5em 0; text-align: center; background: white;
+  }
+  .arrow { text-align: center; font-size: 1.5em; color: #999; }
+</style>
+</head>
+<body>
+
+<h1>📦 第三课：TCP/IP — 数据是怎么传输的？</h1>
+
+<div class="analogy">
+  <p><strong>📮 先讲个快递的故事：</strong></p>
+  <p>你在淘宝下单买一本书：</p>
+  <ol>
+    <li>你把地址写给卖家（对方知道你在哪）</li>
+    <li>卖家把书打包成包裹（数据分片）</li>
+    <li>快递员按地址送到你家（路由传输）</li>
+    <li>你拆开包裹，确认是你要的书（重组数据）</li>
+    <li>你跟卖家说"收到了"（确认回执）</li>
+  </ol>
+  <p><strong>TCP/IP 就是互联网世界的快递系统。</strong></p>
+</div>
+
+<h2>一、IP = 地址系统</h2>
+<p>你家的地址是"XX省XX市XX街道XX号"，服务器的地址就是 <strong>IP地址</strong>。</p>
+
+<div class="card">
+  <p><strong>IPv4 长这样：</strong><code>192.168.1.1</code>（4组数字，每组0-255）</p>
+  <p><strong>IPv6 长这样：</strong><code>240e:390:771:...（更长，彻底解决地址不够用的问题）</code></p>
+  <p><strong>特殊的 IP：</strong></p>
+  <ul>
+    <li><code>127.0.0.1</code> = 本机（你自己这台电脑）</li>
+    <li><code>192.168.x.x</code> = 内网地址（你家路由器分配的）</li>
+    <li>你访问微信时，域名 weixin.qq.com 会被 DNS 解析成 IP 地址</li>
+  </ul>
+</div>
+
+<h2>二、TCP = 传输协议（保证数据不丢不乱）</h2>
+<p>TCP 干的活儿就三个字：<strong>不丢包</strong>。</p>
+
+<div class="card">
+  <p><strong>TCP 三次握手（建立连接）：</strong></p>
+  <div class="step">
+    <p><strong>第一次握手 👋</strong><br>
+    你 → 微信： "我要连你"（SYN）</p>
+  </div>
+  <div class="step">
+    <p><strong>第二次握手 👋</strong><br>
+    微信 → 你： "收到，我准备好了"（SYN-ACK）</p>
+  </div>
+  <div class="step">
+    <p><strong>第三次握手 👋</strong><br>
+    你 → 微信： "好，开始传输！"（ACK）</p>
+  </div>
+  <p><em>这下双方确认对方还活着，通道建立成功。</em></p>
+</div>
+
+<div class="analogy">
+  <p>就像你和对讲机通话：</p>
+  <ul>
+    <li>"你能听到吗？"</li>
+    <li>"能听到你说！"</li>
+    <li>"好，我开始说了！"</li>
+  </ul>
+  <p>——三次确认，这就是三次握手。</p>
+</div>
+
+<h2>三、端口 = 哪个应用在通信</h2>
+
+<p>IP地址找到的是某台电脑，那这台电脑上那么多应用（微信、浏览器、游戏）谁收数据？——<strong>端口号</strong>决定。</p>
+
+<div class="card">
+  <p>就像一栋大楼（一台电脑）里的不同房间号：</p>
+  <ul>
+    <li><code>80</code> — HTTP 默认端口</li>
+    <li><code>443</code> — HTTPS 默认端口（你刚学的加密传输）</li>
+    <li><code>22</code> — SSH（远程连接Linux）</li>
+    <li><code>3306</code> — MySQL 数据库</li>
+    <li><code>53</code> — DNS（域名解析）</li>
+  </ul>
+  <p><strong>所以访问一个服务 = IP地址:端口号</strong></p>
+  <p><code>https://weixin.qq.com:443</code> → 找微信服务器，走443端口（HTTPS加密）</p>
+</div>
+
+<div class="tip">
+  💡 <strong>端口为什么重要？</strong>—— 黑客扫描端口就是在找你电脑上"开了哪些门"，每个门都可能是漏洞。这就是为什么安全工程师要把不该开的端口关掉。
+</div>
+
+<h2>四、数据包的一生（完整路径）</h2>
+
+<p>你在微信发一条消息"你好"，这一路上发生了什么：</p>
+
+<div class="box">你的手机 → 你的消息"你好"</div>
+<div class="arrow">↓</div>
+<div class="box">① 应用层（HTTPS加密，变成一堆乱码）</div>
+<div class="arrow">↓</div>
+<div class="box">② 传输层（TCP切分成小包，编号，加上端口号）</div>
+<div class="arrow">↓</div>
+<div class="box">③ 网络层（加上目标IP地址：微信服务器的IP）</div>
+<div class="arrow">↓</div>
+<div class="box">④ 网络接口层（转成电信号，从WiFi/4G发出去）</div>
+<div class="arrow">↓</div>
+<div class="box" style="border-color: #f0a500;">🚀 穿过路由器、交换机、海底光缆……</div>
+<div class="arrow">↓</div>
+<div class="box">⑤ 微信服务器收到 → 逐层拆包解密 → 显示"你好"</div>
+
+<h2>五、DNS — 域名是如何变成IP的？</h2>
+
+<p>你记得住 <code>weixin.qq.com</code>，但你记不住它的IP地址。</p>
+<p><strong>DNS（域名系统）</strong> 就是互联网的电话本——你把域名给它，它告诉你对应的IP。</p>
+
+<div class="step">
+  <p>你在浏览器输入 <code>weixin.qq.com</code> →</p>
+  <p>系统问DNS服务器："weixin.qq.com 的IP是多少？" →</p>
+  <p>DNS 返回对应IP地址（比如 <code>58.250.137.36</code>） →</p>
+  <p>浏览器再用这个IP去连接微信服务器</p>
+</div>
+
+<div class="tip">
+  💡 <strong>DNS 安全小知识：</strong>
+  有一种攻击叫 DNS 劫持——骗子篡改 DNS 记录，让你访问假的网站还以为是真的。
+  所以安全工程师会检查 DNS 配置是否正确，或者用 DNSSEC 来防止篡改。
+</div>
+
+<h2>六、课后小测</h2>
+<div class="quiz">
+  <p><strong>1. TCP 三次握手的目的是什么？</strong></p>
+  <p>A. 加密数据</p>
+  <p>B. 确认双方通信正常后再开始传数据</p>
+  <p>C. 把数据切碎</p>
+  <p>D. 找到最近的服务器</p>
+  <br>
+  <p><strong>2. 端口号443对应什么服务？</strong></p>
+  <p>A. HTTP</p>
+  <p>B. SSH</p>
+  <p>C. HTTPS</p>
+  <p>D. 微信专属端口</p>
+  <br>
+  <p><strong>3. 你在浏览器输入一个网址后，第一步发生了什么？</strong></p>
+  <p>A. 直接连接服务器</p>
+  <p>B. DNS解析域名成IP地址</p>
+  <p>C. 弹出是否保存密码</p>
+  <p>D. 下载页面所有图片</p>
+</div>
+
+<h2>📌 今天的小任务</h2>
+<ol>
+  <li>打开电脑终端（Terminal），输入 <code>ping weixin.qq.com</code> — 看看微信服务器的IP是多少</li>
+  <li>输入 <code>nslookup weixin.qq.com</code> — 看看DNS返回了什么</li>
+  <li>想一个问题：如果有人控制了你的DNS，会发生什么？</li>
+</ol>
+
+<hr>
+<p style="color: #888; font-size: 0.9em;">
+  第三课完 · 下节课开始动手——教你装Kali Linux虚拟机，真正进入黑客/安全工程师的工具箱 😊
+</p>
+
+</body>
+</html>
