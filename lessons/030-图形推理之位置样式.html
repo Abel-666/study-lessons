@@ -1,17 +1,30 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>图形推理之位置样式</title><style>*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,sans-serif;max-width:820px;margin:0 auto;padding:30px 20px 100px;color:#1a1a2e;background:#fafafa;line-height:2;font-size:16px}
-h1{font-size:28px}.subtitle{font-size:15px;color:#888;border-bottom:3px solid #0057a3;padding-bottom:14px;margin-bottom:28px}
-h2{font-size:20px;margin:28px 0 12px;color:#0057a3;border-left:5px solid #0057a3;padding-left:12px}
-.card{background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:16px 20px;margin:14px 0}
-.baidu{background:#f0f7ff;border-left:5px solid #0057a3;padding:12px 16px;margin:14px 0;border-radius:6px;font-size:15px}
-.highlight{background:#fff8e1;border-left:5px solid #f9a825;padding:12px 16px;margin:14px 0;border-radius:6px;font-size:15px}
-.exam-q{background:#f3f4f6;border-radius:10px;padding:14px 18px;margin:10px 0;border-left:5px solid #e8710a}
-.exam-q .label{font-size:12px;color:#e8710a;font-weight:700;margin-bottom:4px}
-.exam-q .qtext{font-size:15px;margin-bottom:6px}
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>第30课：图形推理·位置样式</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:860px;margin:0 auto;padding:30px 20px 120px;color:#1a1a2e;background:#fafafa;line-height:2.2;font-size:16px}
+h1{font-size:28px;color:#1a1a2e}.subtitle{font-size:14px;color:#888;border-bottom:3px solid #0057a3;padding-bottom:14px;margin-bottom:28px}
+h2{font-size:20px;margin:32px 0 12px;color:#0057a3;border-left:5px solid #0057a3;padding-left:12px}
+.card{background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:20px 24px;margin:16px 0}
+.baidu{background:#f0f7ff;border-left:5px solid #0057a3;padding:14px 20px;margin:16px 0;border-radius:6px;font-size:15px}
+.exam-q{background:#f3f4f6;border-radius:10px;padding:14px 18px;margin:12px 0;border-left:5px solid #e8710a}
+.exam-q .label{font-size:13px;color:#e8710a;font-weight:700;margin-bottom:4px}
+.exam-q .qtext{font-size:15px;margin-bottom:6px;line-height:1.9}
 .exam-q .options{font-size:14px;color:#444;line-height:2.2}
-.exam-q .ans{font-size:14px;color:#2e7d32;display:none;margin-top:6px;padding-top:8px;border-top:1px dashed #ddd}
-.exam-q .show{display:block}.btn{background:#0057a3;color:#fff;border:none;padding:6px 16px;border-radius:4px;font-size:13px;cursor:pointer;margin:4px 0}.btn:hover{background:#003d73}
-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px}th,td{padding:8px 10px;border:1px solid #ddd;text-align:left}th{background:#e3f0ff}</style></head><body>
-<h1>图形推理之位置样式</h1><p class="subtitle">模块四 · 正在更新中</p>
-<div class="baidu"><strong>🤔 这节课学什么：</strong>课程内容正在完善，后续会更新详细知识点+真题练习。</div>
-<p style="margin-top:40px"><a href="../index.html">← 返回目录</a></p></body></html>
+.exam-q .ans{font-size:14px;color:#2e7d32;display:none;margin-top:6px;padding-top:8px;border-top:1px dashed #ddd;line-height:2}
+.exam-q .show{display:block}
+.btn{background:#0057a3;color:#fff;border:none;padding:6px 16px;border-radius:4px;font-size:13px;cursor:pointer;margin:4px 0}.btn:hover{background:#003d73}
+</style></head><body>
+<h1>🧩 第30课：图形推理·位置与样式</h1>
+<p class="subtitle">行测·判断推理 · 旋转/翻转/移动/叠加</p>
+<div class="baidu"><strong>🤔 图形推理考什么？</strong>给你一组图形找规律。如果图形很像→看位置变化（旋转/翻转/移动）。如果图形有相同有不同→看样式叠加。</div>
+<div class="card"><h3>常见规律</h3><p>①旋转：图形整体顺时针/逆时针旋转90°、180°<br>②翻转：左右翻转/上下翻转<br>③移动：内部小元素在移动位置<br>④叠加：图1+图2=图3（去同存异/去异存同）</p></div>
+<h2>📝 练习（8题）</h2>
+<div class="exam-q"><div class="label">第1题</div><div class="qtext">一组正方形：口→日→目→?（正方形中横线逐次增加1条）</div><div class="options">A. 口 B. 田 C. 目 D. 罒</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ B。横线从0→1→2→3条，下一个正方形内应有3条横线或田字格。</div></div>
+<div class="exam-q"><div class="label">第2题</div><div class="qtext">●→◐→○→◑→?（黑色区域顺时针旋转）</div><div class="options">A. ● B. ◓ C. ◎ D. ◒</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ B。黑色部分顺时针转，全黑→左半→全白→右半→全黑。</div></div>
+<div class="exam-q"><div class="label">第3题</div><div class="qtext">△→▷→▽→◁→?（三角形顺时针旋转90°）</div><div class="options">A. △ B. ▷ C. ▽ D. ◁</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ A。每次顺时针转90°，转一圈回到△。</div></div>
+<div class="exam-q"><div class="label">第4题</div><div class="qtext">图1:▲△, 图2:△▲, 图3:▲△, 图4:?（黑白交换位置）</div><div class="options">A. ▲△ B. △▲ C. ▲▲ D. △△</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ B。黑白交替位置。</div></div>
+<div class="exam-q"><div class="label">第5题</div><div class="qtext">第一行○○，第二行○●，第三行●○，第四行??（两两组合所有可能）</div><div class="options">A. ○○ B. ○● C. ●○ D. ●●</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ D。4种组合全出现，缺●●。</div></div>
+<div class="exam-q"><div class="label">第6题</div><div class="qtext">L→⊥→┐→?（每次顺时针转90°）</div><div class="options">A. L B. └ C. ┐ D. ┘</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ B。L(0°)→⊥(90°)→┐(180°)→└(270°)。</div></div>
+<div class="exam-q"><div class="label">第7题</div><div class="qtext">图1:□○,图2:○□,图3:□○,图4:?（圆和方交换位置）</div><div class="options">A. □○ B. ○□ C. □□ D. ○○</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ B。奇数次图是□○，偶数次是○□。</div></div>
+<div class="exam-q"><div class="label">第8题</div><div class="qtext">★★☆→★☆★→☆★★→★★☆→?（★和☆交替移动）</div><div class="options">A. ★☆★ B. ☆★★ C. ★★☆ D. ☆☆☆</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ A。☆在3个位置循环移动。</div></div>
+<p style="margin-top:40px"><a href="../index.html">📂 目录</a> · <a href="031-图形推理之数量属性.html">下一课 →</a></p>
+</body></html>
