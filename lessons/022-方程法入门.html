@@ -1,17 +1,32 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>方程法入门</title><style>*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,sans-serif;max-width:820px;margin:0 auto;padding:30px 20px 100px;color:#1a1a2e;background:#fafafa;line-height:2;font-size:16px}
-h1{font-size:28px}.subtitle{font-size:15px;color:#888;border-bottom:3px solid #0057a3;padding-bottom:14px;margin-bottom:28px}
-h2{font-size:20px;margin:28px 0 12px;color:#0057a3;border-left:5px solid #0057a3;padding-left:12px}
-.card{background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:16px 20px;margin:14px 0}
-.baidu{background:#f0f7ff;border-left:5px solid #0057a3;padding:12px 16px;margin:14px 0;border-radius:6px;font-size:15px}
-.highlight{background:#fff8e1;border-left:5px solid #f9a825;padding:12px 16px;margin:14px 0;border-radius:6px;font-size:15px}
-.exam-q{background:#f3f4f6;border-radius:10px;padding:14px 18px;margin:10px 0;border-left:5px solid #e8710a}
-.exam-q .label{font-size:12px;color:#e8710a;font-weight:700;margin-bottom:4px}
-.exam-q .qtext{font-size:15px;margin-bottom:6px}
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>第22课：方程法入门</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:860px;margin:0 auto;padding:30px 20px 120px;color:#1a1a2e;background:#fafafa;line-height:2.2;font-size:16px}
+h1{font-size:28px;color:#1a1a2e}.subtitle{font-size:14px;color:#888;border-bottom:3px solid #0057a3;padding-bottom:14px;margin-bottom:28px}
+h2{font-size:20px;margin:32px 0 12px;color:#0057a3;border-left:5px solid #0057a3;padding-left:12px}
+p,li{font-size:16px;margin-bottom:10px;color:#333;line-height:2.2}
+.card{background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:20px 24px;margin:16px 0}
+.baidu{background:#f0f7ff;border-left:5px solid #0057a3;padding:14px 20px;margin:16px 0;border-radius:6px;font-size:15px}
+.exam-q{background:#f3f4f6;border-radius:10px;padding:14px 18px;margin:12px 0;border-left:5px solid #e8710a}
+.exam-q .label{font-size:13px;color:#e8710a;font-weight:700;margin-bottom:4px}
+.exam-q .qtext{font-size:15px;margin-bottom:6px;line-height:1.9}
 .exam-q .options{font-size:14px;color:#444;line-height:2.2}
-.exam-q .ans{font-size:14px;color:#2e7d32;display:none;margin-top:6px;padding-top:8px;border-top:1px dashed #ddd}
-.exam-q .show{display:block}.btn{background:#0057a3;color:#fff;border:none;padding:6px 16px;border-radius:4px;font-size:13px;cursor:pointer;margin:4px 0}.btn:hover{background:#003d73}
-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px}th,td{padding:8px 10px;border:1px solid #ddd;text-align:left}th{background:#e3f0ff}</style></head><body>
-<h1>方程法入门</h1><p class="subtitle">模块三 · 正在更新中</p>
-<div class="baidu"><strong>🤔 这节课学什么：</strong>课程内容正在完善，后续会更新详细知识点+真题练习。</div>
-<p style="margin-top:40px"><a href="../index.html">← 返回目录</a></p></body></html>
+.exam-q .ans{font-size:14px;color:#2e7d32;display:none;margin-top:6px;padding-top:8px;border-top:1px dashed #ddd;line-height:2}
+.exam-q .show{display:block}
+.btn{background:#0057a3;color:#fff;border:none;padding:6px 16px;border-radius:4px;font-size:13px;cursor:pointer;margin:4px 0}.btn:hover{background:#003d73}
+</style></head><body>
+<h1>🔢 第22课：方程法入门</h1>
+<p class="subtitle">行测·数量关系 · 设未知数列方程</p>
+<div class="baidu"><strong>🤔 什么是方程？</strong>等式——"什么等于什么"。设x列等式求解。数量关系的基础工具。</div>
+<div class="card"><h3>三步法</h3><p>①设未知数（问题问什么就设什么）②找等量关系（一定有"谁等于谁"）③列方程求解</p></div>
+
+<h2>📝 练习（8题）</h2>
+<div class="exam-q"><div class="label">第1题</div><div class="qtext">某单位每车坐20人剩2人；减1辆车正好均分。共多少员工？</div><div class="options">A. 244 B. 242 C. 220 D. 224</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ B。设x辆，20x+2能被x-1整除。x=12时242÷11=22。</div></div>
+<div class="exam-q"><div class="label">第2题</div><div class="qtext">某快递站有x人，每人派送y件。若增5人每人减10件；若减5人每人增20件。总件数？</div><div class="options">A. 300 B. 600 C. 900 D. 1200</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ B。(x+5)(y-10)=xy，(x-5)(y+20)=xy，解得x=15,y=40，共600件。</div></div>
+<div class="exam-q"><div class="label">第3题</div><div class="qtext">三数成等差数列，和300。最大金额最多多少？</div><div class="options">A. 198 B. 199 C. 200 D. 197</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ B。设a-d,a,a+d，3a=300,a=100。最大=100+d，d最大99→199。</div></div>
+<div class="exam-q"><div class="label">第4题</div><div class="qtext">甲乙两人共存款5000元，甲给乙500元后两人相等。甲原来多少？</div><div class="options">A. 2500 B. 3000 C. 3500 D. 4000</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ B。设甲x则乙5000-x，x-500=5000-x+500，x=3000。</div></div>
+<div class="exam-q"><div class="label">第5题</div><div class="qtext">一件商品进价80，售价100，每天卖100件。涨价1元少卖2件。利润最大时定价？</div><div class="options">A. 105 B. 110 C. 115 D. 120</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ C。设涨价x元，利润=(20+x)(100-2x)，x=15时最大。</div></div>
+<div class="exam-q"><div class="label">第6题</div><div class="qtext">两根绳子共长50米，第一根用去10米后是第一根的2倍。第二根原有多长？</div><div class="options">A. 20 B. 30 C. 40 D. 45</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ B。设第一根x，第二根50-x。50-x=2(x-10)→x=20，第二根30。</div></div>
+<div class="exam-q"><div class="label">第7题</div><div class="qtext">甲乙两人共有140元，乙给甲10元后甲是乙的3倍。乙原来多少？</div><div class="options">A. 40 B. 45 C. 50 D. 55</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ B。设乙原x，140-x+10=3(x-10)→x=45。</div></div>
+<div class="exam-q"><div class="label">第8题</div><div class="qtext">3年前父亲年龄是儿子的5倍，3年后父亲年龄是儿子的3倍。父亲现年？</div><div class="options">A. 33 B. 36 C. 39 D. 42</div><button class="btn" onclick="this.nextElementSibling.classList.toggle('show')">看答案</button><div class="ans">✅ A。设子x，父y，y-3=5(x-3)，y+3=3(x+3)→x=9,y=33。</div></div>
+<p style="margin-top:40px"><a href="../index.html">📂 目录</a> · <a href="023-工程问题.html">下一课 →</a></p>
+</body></html>
