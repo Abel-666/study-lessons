@@ -1,0 +1,243 @@
+/* ============================================
+   中国邮政社招备考 · 统一课程样式
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+               'Hiragino Sans GB', 'Microsoft YaHei', Roboto, sans-serif;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 30px 20px 120px;
+  color: #1a1a2e;
+  background: #fafafa;
+  line-height: 2.2;
+  font-size: 16px;
+}
+
+/* --- Typography --- */
+h1 {
+  font-size: 28px;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 32px 0 12px;
+  color: #0057a3;
+  border-left: 5px solid #0057a3;
+  padding-left: 12px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 24px 0 10px;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #888;
+  border-bottom: 3px solid #0057a3;
+  padding-bottom: 14px;
+  margin-bottom: 28px;
+}
+
+p, li { font-size: 16px; margin-bottom: 10px; color: #333; line-height: 2.2; }
+
+/* --- Cards & Callouts --- */
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin: 16px 0;
+}
+
+.info-box {
+  background: #f0f7ff;
+  border-left: 5px solid #0057a3;
+  padding: 14px 20px;
+  margin: 16px 0;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.highlight-box {
+  background: #fff8e1;
+  border-left: 5px solid #f9a825;
+  padding: 14px 20px;
+  margin: 16px 0;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.warning-box {
+  background: #fff3e0;
+  border-left: 5px solid #e8710a;
+  padding: 14px 20px;
+  margin: 16px 0;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.tip-box {
+  background: #e8f5e9;
+  border-left: 5px solid #2e7d32;
+  padding: 14px 20px;
+  margin: 16px 0;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* --- Quiz / Exam Questions --- */
+.exam-q {
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 12px 0;
+  border-left: 5px solid #e8710a;
+}
+
+.exam-q .label {
+  font-size: 13px;
+  color: #e8710a;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.exam-q .qtext {
+  font-size: 15px;
+  margin-bottom: 6px;
+  line-height: 1.9;
+}
+
+.exam-q .options {
+  font-size: 14px;
+  color: #444;
+  line-height: 2.2;
+}
+
+.exam-q .ans {
+  font-size: 14px;
+  color: #2e7d32;
+  display: none;
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px dashed #ddd;
+  line-height: 2;
+}
+
+.exam-q .show { display: block; }
+
+/* --- Buttons --- */
+.btn {
+  background: #0057a3;
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  margin: 4px 0;
+  transition: background 0.2s;
+}
+
+.btn:hover { background: #003d73; }
+.btn:active { transform: scale(0.97); }
+
+.btn-secondary {
+  background: #e8710a;
+}
+
+.btn-secondary:hover { background: #c55f00; }
+
+/* --- Tables --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 15px;
+}
+
+th, td {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: #e3f0ff;
+  font-weight: 600;
+  color: #0057a3;
+}
+
+tr:nth-child(even) { background: #f8f9fa; }
+
+/* --- Tags & Badges --- */
+.tag {
+  display: inline-block;
+  background: #0057a3;
+  color: #fff;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+.tag-orange {
+  background: #e8710a;
+}
+
+.tag-green {
+  background: #0a8e5c;
+}
+
+/* --- Source Citation --- */
+.source {
+  color: #888;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* --- Links --- */
+a { color: #0057a3; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  color: #888;
+  font-size: 14px;
+}
+
+/* --- Special: Key Concepts --- */
+.key-concept {
+  background: #fff;
+  border: 2px solid #0057a3;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0057a3;
+}
+
+/* --- Progress / Print --- */
+@media print {
+  body { padding: 20px; font-size: 14px; line-height: 1.8; }
+  .btn { display: none; }
+  .exam-q .ans { display: block; }
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  body { padding: 16px 12px 80px; font-size: 15px; }
+  h1 { font-size: 22px; }
+  table { font-size: 13px; }
+  th, td { padding: 6px 8px; }
+}
